@@ -1,0 +1,42 @@
+﻿@model BlogdOferta.Models.Categoria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomCate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomCate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoCate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoCate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacionCate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacionCate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CategoriaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

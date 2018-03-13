@@ -1,0 +1,98 @@
+﻿@model BlogdOferta.Models.Oferta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Oferta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorias.NomCate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorias.NomCate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Negocios.NomNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Negocios.NomNeg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionOfer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionOfer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagenNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagenNeg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Existencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Existencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Porcentaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Porcentaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaOferInicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaOferInicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaOferFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaOferFinal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OfertaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

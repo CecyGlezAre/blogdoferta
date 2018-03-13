@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BlogdOferta.Models.Negocio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="container">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr class="warning">
+            <th>
+                @Html.DisplayNameFor(model => model.NomNeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DomNeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagenNeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalizacionNeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoNeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreacionNeg)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomNeg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DomNeg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImagenNeg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocalizacionNeg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoNeg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaCreacionNeg)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.NegocioID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.NegocioID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.NegocioID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

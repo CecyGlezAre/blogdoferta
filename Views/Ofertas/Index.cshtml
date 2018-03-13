@@ -1,0 +1,90 @@
+﻿@model IEnumerable<BlogdOferta.Models.Oferta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="container">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr class="warning">
+            <th>
+                @Html.DisplayNameFor(model => model.Categorias.NomCate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Negocios.NomNeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionOfer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagenNeg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Existencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porcentaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaOferInicial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaOferFinal)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categorias.NomCate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Negocios.NomNeg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescripcionOfer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImagenNeg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Existencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Porcentaje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaOferInicial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaOferFinal)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OfertaID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.OfertaID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OfertaID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

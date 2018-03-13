@@ -1,0 +1,66 @@
+﻿@model BlogdOferta.Models.Negocio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Negocio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomNeg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DomNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomNeg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagenNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagenNeg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocalizacionNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocalizacionNeg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoNeg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacionNeg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacionNeg)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NegocioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
