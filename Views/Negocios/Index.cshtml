@@ -43,7 +43,8 @@
                     @Html.DisplayFor(modelItem => item.DomNeg)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ImagenNeg)
+                    <img src="~/Imagenes/@item.ImagenNeg" width="80" />
+                   @* @Html.DisplayFor(modelItem => item.ImagenNeg)*@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.LocalizacionNeg)
